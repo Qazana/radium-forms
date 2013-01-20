@@ -3,6 +3,8 @@ Stable tag: 1.0
 Requires at least: 3.0
 Tested up to: 3.5
 
+This plugin is based on Grunion Contact forms that ships with Jetpack by Automatic, Inc
+
 Add a contact form to any post, page or text widget. Messages will be sent to any email address you choose. As seen on WordPress.com.
 
 == Description ==

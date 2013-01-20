@@ -2,13 +2,14 @@
 
 /*
 Plugin Name: Radium Forms
-Description: Add a contact form to any post, page or text widget.  Emails will be sent to the post's author by default, or any email address you choose.  As seen on WordPress.com.
-Plugin URI: http://automattic.com/#
-AUthor: Automattic, Inc.
-Author URI: http://automattic.com/
-Version: 2.4
+Description: Add a contact form to any post, page or text widget.  Emails will be sent to the post's author by default, or any email address you choose.
+Plugin URI: http://radiumthemes.com/
+AUthor: RadiumThemes.
+Author URI: http://radiumthemes.com/
+Version: 1.0
 License: GPLv2 or later
 */
+
 
 define( 'RADIUM_FORMS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RADIUM_FORMS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
