@@ -71,7 +71,7 @@ class Radium_Contact_Form_Plugin {
 		// custom post type we'll use to keep copies of the feedback items
 		register_post_type( 'feedback', array(
 			'labels'            => array(
-				'name'               => __( 'Feedbacks', 'radium' ),
+				'name'               => __( 'Feedback', 'radium' ),
 				'singular_name'      => __( 'Feedback', 'radium' ),
 				'search_items'       => __( 'Search Feedback', 'radium' ),
 				'not_found'          => __( 'No feedback found', 'radium' ),
@@ -83,7 +83,8 @@ class Radium_Contact_Form_Plugin {
 			'public'            => FALSE,
 			'rewrite'           => FALSE,
 			'query_var'         => FALSE,
-			'capability_type'   => 'page'
+			'capability_type'   => 'page',
+			'menu_position' 	=> 60
 		) );
 
 		// Add "spam" as a post status
@@ -1382,3 +1383,32 @@ function grunion_delete_old_spam() {
 		wp_schedule_single_event( time() + 700, 'grunion_scheduled_delete' );
 	}
 }
+
+
+/**
+ * Tell WordPress to expect a custom menu order
+ * @since 1.0
+ *
+ function radium_forms_toggle_menu_order(){
+	return true;
+}
+add_filter( 'custom_menu_order', 'radium_forms_toggle_menu_order' );
+
+/**
+ * Erase menu items
+ * @since 1.0
+ *
+ 
+ function radium_forms_grunion_remove( $menu_order ){
+	global $menu;
+
+	foreach ( $menu as $mkey => $m ) {
+		$key = array_search( 'edit.php?post_type=feedback', $m );
+
+		if ( $key )
+			unset( $menu[$mkey] );
+	}
+
+	return $menu_order;
+}
+add_filter( 'menu_order', 'radium_forms_grunion_remove' );  */
