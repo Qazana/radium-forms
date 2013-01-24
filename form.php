@@ -15,6 +15,8 @@ define( 'RADIUM_FORMS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RADIUM_FORMS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'RADIUM_FORMS_VERSION', '2.4');
 
+require_once RADIUM_FORMS_PLUGIN_DIR . '/integrate.php';
+
 if ( is_admin() )
 	require_once RADIUM_FORMS_PLUGIN_DIR . '/admin.php';
 
@@ -33,10 +35,13 @@ class Radium_Contact_Form_Plugin {
 		if ( !$instance ) {
 			$instance = new Radium_Contact_Form_Plugin;
 		}
-
+ 		
 		return $instance;
 	}
+	
 
+	
+	
 	/**
 	 * Strips HTML tags from input.  Output is NOT HTML safe.
 	 *
