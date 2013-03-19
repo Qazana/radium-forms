@@ -124,28 +124,30 @@ class Radium_Forms_Integrate {
 		$samples['contact'] = array(
 					'name' => 'Contact Page',
 					'id' => 'contact',
-					'preview' => plugins_url( 'images/sample-contact-page.png', dirname(__FILE__)),
+					'preview' => plugins_url( 'radium-forms/images/sample-contact.jpg', dirname(__FILE__)),
 					
 		 			'featured' => array(
 		 					'element_1' => array(
 		 						'type' => 'map',
-		 						'query_type' => 'none',
 		 						'width' => 'element1-1',
 		 						'options' => array(
 		 							'address' => 'New York',
 		 							'width' => '100%', 
 		 							'height' => '400',
+		 							'zoom' => '',
+		 							'html' => '',
+		 							'popup' => '',
+		 							'maptype' => '',
 		 						)
 		 					)
 		 				),
 		 				
 		 			'primary' => array(
-		 					'element_2' => array(
-		 					'type' => 'contact',
-		 					'query_type' => 'none',
-		 					'width' => 'element1-1',
-		 					'options' => array( )
-		 				)
+	 					'element_2' => array(
+	 						'type' => 'contact',
+	 						'width' => 'element1-1',
+	 						'options' => array( )
+	 					)
 		 			)
 					
 				);

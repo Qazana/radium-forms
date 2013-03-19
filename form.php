@@ -726,7 +726,7 @@ class Radium_Contact_Form extends Radium_Contact_Form_Shortcode {
 			// May eventually want to send this to admin-post.php...
 			$url = apply_filters( 'grunion_contact_form_form_action', "{$url}#contact-form-{$id}", $GLOBALS['post'], $id );
 
-			$r .= "<form action='" . esc_url( $url ) . "' method='post' class='contact-form commentsblock'>\n";
+			$r .= "<form action='" . esc_url( $url ) . "' method='post' class='contact-form commentsblock clearfix'>\n";
 			$r .= $form->body;
 			$r .= "\t<p class='contact-submit'>\n";
 			$r .= "\t\t<button class='button left' type='submit' name='submit'><span>" . __( "Submit &rarr;", 'radium' ) . "</span></button>\n";
